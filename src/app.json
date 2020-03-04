@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/main",
+    "pages/articles/main",
+    "pages/articles/article/main",
+    "pages/user/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor":"#d3a9a9",
+    "navigationBarTitleText": "老中医",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/main",
+        "iconPath": "static/icons/home.png",
+        "selectedIconPath": "static/icons/home-selected.png",
+        "text": "医生"
+      },
+      {
+        "pagePath": "pages/articles/main",
+        "iconPath": "static/icons/home.png",
+        "selectedIconPath": "static/icons/home-selected.png",
+        "text": "病历"
+      },      
+      {
+        "pagePath": "pages/user/main",
+        "iconPath": "static/icons/home.png",
+        "selectedIconPath": "static/icons/home-selected.png",
+        "text": "我"
+      }
+    ],
+    "selectedColor": "#f59aaa",
+    "borderStyle":"white"
+  }
+}
