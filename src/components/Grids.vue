@@ -16,8 +16,32 @@
         :open-type="item.openType"
       >
         <i v-if="item.icon" class="iconfont" :class="item.icon" style="margin:30rpx 35rpx"></i>
-        <img v-if="item.img" :src="item.img" style="margin:30rpx 35rpx">
-        <label style="font-size:32rpx">{{item.name}}</label>
+        <!-- <van-image
+          v-if="item.img"
+          :src="item.img"
+          style="margin:30rpx 35rpx"
+          width="20rem"
+          height="20rem"
+          fit="cover"
+          use-error-slot
+          lazy-load
+        >
+          <van-icon name="failure" />
+        </van-image> -->
+        <!-- <van-image
+        round
+          :src="item.img"          
+          width="20rem"
+          height="20rem"
+        >
+          <van-icon name="failure" />
+        </van-image> -->
+        <van-card :tag="item.name" desc="描述信息" title="商品标题" :thumb="item.img">
+         <view slot="footer">
+            <van-button size="mini">按钮</van-button>
+            <van-button size="mini">按钮</van-button>
+          </view>
+        </van-card>
       </button>
     </block>
   </div>
@@ -36,7 +60,7 @@ export default {
     }
   },
   computed: {
-    width () {
+    width() {
       this.$nextTick(() => {
         if (Number(this.grids.length) > Number(this.limit)) {
           return 150 / Number(this.limit)
@@ -46,7 +70,7 @@ export default {
     }
   },
   methods: {
-    onClick (item) {
+    onClick(item) {
       if (item.path) {
         this.WXP.navigateTo({
           url: item.path
@@ -96,10 +120,6 @@ input {
     .iconfont {
       font-size: 1.5em;
     }
-  }
-  img {
-    width: 200rpx;
-    height: 200rpx;
   }
 }
 </style>

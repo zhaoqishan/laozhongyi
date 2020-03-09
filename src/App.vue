@@ -1,6 +1,6 @@
 <script>
 export default {
-  created () {
+  created() {
     // 获取openId
     wx.cloud
       .callFunction({ name: 'user' })
@@ -21,13 +21,15 @@ export default {
 </script>
 
 <style>
-page{
-  background-color: rgb(204, 228, 248)
+page {
+  background-color: #d2a6a6;
 }
-open-data{
+
+open-data {
   overflow: hidden;
   display: block;
 }
+
 .container {
   height: 100%;
   display: flex;
@@ -37,6 +39,7 @@ open-data{
   padding: 200rpx 0;
   box-sizing: border-box;
 }
+
 /* this rule will be remove */
 * {
   transition: width 2s;

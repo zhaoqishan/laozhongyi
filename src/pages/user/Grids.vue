@@ -7,7 +7,9 @@ name: '测试', path: { path: '/pages/client/home/main', isTab: true },openType:
       <div class="grid" :style="{ width: width + '%;' }">
         <button @click="onClick(item.path)" :open-type="item.openType">
           <i v-if="item.icon" class="iconfont" :class="item.icon" style="margin:10rpx 0;"></i>
-          <img v-if="item.img" :src="item.img" style="margin:10rpx 0;" />
+          <van-image v-if="item.img" :src="item.img" style="margin:10rpx 0;" width="20rem" height="20rem" fit="cover" use-error-slot lazy-load>
+            <text slot="error">加载失败</text>
+          </van-image>
           <label style="font-size:32rpx">{{ item.name }}</label>
         </button>
       </div>
@@ -83,9 +85,6 @@ input {
       font-size: 1.5em;
     }
   }
-  img {
-    width: 200rpx;
-    height: 200rpx;
-  }
+  
 }
 </style>
